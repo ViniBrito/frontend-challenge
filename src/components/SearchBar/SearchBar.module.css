@@ -1,0 +1,10 @@
+input{
+  border-radius: 5px;
+  border: 1px solid #000;
+  padding: 3px;
+}
+
+.alt-button{
+  width: 10vw;
+  height: 4vh;
+}

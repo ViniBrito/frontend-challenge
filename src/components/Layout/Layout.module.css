@@ -4,6 +4,7 @@
 
 .content {
   min-height: calc(100vh - var(--height-nav-bar) - var(--height-footer));
+  background-image: linear-gradient(to bottom right, #fff, #1db954, #191414);
 }
 
 .footer {
