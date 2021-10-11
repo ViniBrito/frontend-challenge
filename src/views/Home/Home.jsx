@@ -14,7 +14,8 @@ class Home extends React.Component {
         <div className={styles.wrapper}>
           <h1>Bem vindo (a) ao ArtistFetch!</h1>
           <br/>
-          <p>Aqui você consegue localizar qualquer música do seu artista favorito.<br/>
+          <p>Aqui você consegue localizar qualquer música do seu artista favorito.
+          <br/>
           Experimente clicando no botão abaixo.</p>
         </div>
         <div style={{

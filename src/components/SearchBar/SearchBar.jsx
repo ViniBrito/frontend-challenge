@@ -1,29 +1,29 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import styles from './SearchBar.module.css'
 
-class SearchBar extends Component {
+const SearchBar = ({ onClick }) => {
+  const { 'alt-button': altButton } = styles
 
-  state = {}
-
-  componentDidMount() {}
-
-  render() {
-    const {
-      props: { children },
-    } = this
-
-    const { 'alt-button': altButton } = styles
-
-    return (
-      <>
-        <div>
-          <input></input>
-          <button className={altButton}>Pesquisar</button>
-        </div>
-      </>
-    )
+  const Checker = () => {
+    if (document.getElementById('artist').value.length > 3)
+      document.getElementById('send').click()
   }
+  return (
+    <>
+      <div>
+        <input id="artist" onChange={Checker}></input>
+        <button
+          id="send"
+          type="submit"
+          className={altButton}
+          onClick={() => onClick(document.getElementById('artist').value)}
+        >
+          Pesquisar
+        </button>
+      </div>
+    </>
+  )
 }
 
 export default SearchBar

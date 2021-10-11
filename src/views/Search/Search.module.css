@@ -6,3 +6,10 @@
   background-image: none;
 }
 
+.result {
+  border: 2px solid #000;
+  background-color: #fff;
+  width: 26vw;
+  padding: 2px;
+  border-radius: 5px;
+}
