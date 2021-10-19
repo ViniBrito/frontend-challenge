@@ -1,0 +1,57 @@
+.wrapper {
+  max-width: 1224px;
+  padding: 30px 20px;
+  margin: 0 auto;
+  font: 16px/14px 'Nunito', sans-serif;
+  background-image: none;
+  display: block;
+  text-align: center;
+}
+
+img {
+  border: 2px solid #000;
+  border-radius: 5%;
+}
+
+.genres {
+  display: flex;
+  justify-content: center;
+}
+
+.item {
+  margin-right: 1%;
+  margin-left: 1%;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 2px solid #000;
+  background-image: linear-gradient(to bottom right, #07ca13, #004a00);
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 1%;
+  color: #fff;
+  padding: 1.5%;
+  text-align: center;
+}
+
+.card {
+  padding: 1%;
+  width: 20%;
+  height: 20%;
+  margin: 0.5%;
+  margin-top: 5%;
+  color: #fff;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-3%);
+  background-color: #004a00;
+}
+
+.blank {
+  margin: 5%;
+}

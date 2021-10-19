@@ -25,8 +25,19 @@ const Search = () => {
           </p>
           <div className={styles.result}>
             {artistInfo.map(item => (
-              <div style={{ padding: '2px' }}>
-                {item.name}
+              <div className={styles.card}>
+                <img
+                  src={
+                    item.images[0]
+                      ? item.images[0].url
+                      : 'https://icon-library.com/images/no-user-image-icon/no-user-image-icon-3.jpg'
+                  }
+                  height="200vh"
+                  width="200vh"
+                  alt={item.name}
+                />
+                <br />
+                <a href={`/artist/${item.id}`}>{item.name}</a>
                 <br />
               </div>
             ))}
@@ -48,6 +59,10 @@ const Search = () => {
         <SearchBar onClick={send} />
         <br />
         {Show()}
+        <br />
+        <form action="/">
+          <button>Página inicial</button>
+        </form>
       </div>
     </React.Fragment>
   )

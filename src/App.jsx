@@ -2,18 +2,21 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
 import { Layout } from 'components'
-import { Home, Search } from 'views'
+import { Home, Search, Artist } from 'views'
 
 import './App.module.css'
 
 const App = () => (
   <Layout>
     <Switch>
+      <Route path="/artist/:id">
+        <Artist />
+      </Route>
       <Route path="/search">
-        <Search/>
+        <Search />
       </Route>
       <Route path="/">
-        <Home/>
+        <Home />
       </Route>
     </Switch>
   </Layout>

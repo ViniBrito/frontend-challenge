@@ -5,19 +5,20 @@
   font: 16px/14px 'Nunito', sans-serif;
 }
 
-button{
+button {
   background-image: linear-gradient(to bottom right, #07ca13, #000);
   border: 2px solid #004a00;
   border-radius: 5px;
   width: 20vw;
   height: 5vh;
   color: #fff;
+  margin-left: 1%;
 }
 
-button:hover{
+button:hover {
   background-image: linear-gradient(to bottom right, #0af919, #032705);
 }
 
-button:active{
+button:active {
   transform: translateY(4px);
 }
