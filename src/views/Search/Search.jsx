@@ -36,9 +36,7 @@ const Search = () => {
                   width="200vh"
                   alt={item.name}
                 />
-                <br />
                 <a href={`/artist/${item.id}`}>{item.name}</a>
-                <br />
               </div>
             ))}
           </div>
@@ -58,7 +56,7 @@ const Search = () => {
         <br />
         <SearchBar onClick={send} />
         <br />
-        {Show()}
+        <Show />
         <br />
         <form action="/">
           <button>Página inicial</button>

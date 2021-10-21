@@ -13,19 +13,17 @@ class Home extends React.Component {
       <React.Fragment>
         <div className={styles.wrapper}>
           <h1>Bem vindo (a) ao ArtistFetch!</h1>
-          <br/>
-          <p>Aqui você consegue localizar qualquer música do seu artista favorito.
-          <br/>
-          Experimente clicando no botão abaixo.</p>
+          <br />
+          <p>
+            Aqui você consegue localizar qualquer música do seu artista
+            favorito.
+            <br />
+            Experimente clicando no botão abaixo.
+          </p>
         </div>
-        <div style={{
-        		width: "50%",
-        		display: "flex",
-        		justifyContent: "center",
-				alignItems: "center",
-        	}}>
+        <div className={styles.space}>
           <form action="/search">
-        	  <button>Buscar artista</button>
+            <button>Buscar artista</button>
           </form>
         </div>
       </React.Fragment>

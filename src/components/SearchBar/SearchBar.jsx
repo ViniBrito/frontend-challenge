@@ -12,7 +12,7 @@ const SearchBar = ({ onClick }) => {
   return (
     <>
       <div>
-        <input id="artist" onChange={Checker}></input>
+        <input id="artist" onChange={Checker} />
         <button
           id="send"
           type="submit"

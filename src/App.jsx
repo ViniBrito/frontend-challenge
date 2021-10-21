@@ -1,7 +1,7 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Switch } from 'react-router-dom'
 
-import { Layout } from 'components'
+import { Layout, PrivateRoute } from 'components'
 import { Home, Search, Artist } from 'views'
 
 import './App.module.css'
@@ -9,15 +9,15 @@ import './App.module.css'
 const App = () => (
   <Layout>
     <Switch>
-      <Route path="/artist/:id">
+      <PrivateRoute path="/artist/:id">
         <Artist />
-      </Route>
-      <Route path="/search">
+      </PrivateRoute>
+      <PrivateRoute path="/search">
         <Search />
-      </Route>
-      <Route path="/">
+      </PrivateRoute>
+      <PrivateRoute path="/">
         <Home />
-      </Route>
+      </PrivateRoute>
     </Switch>
   </Layout>
 )

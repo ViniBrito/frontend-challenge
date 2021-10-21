@@ -22,11 +22,14 @@
   margin: 0.5%;
   background-color: #004a00;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
   text-decoration: none;
   color: #fff;
+  padding: 4px;
 }
 
 a:hover {
