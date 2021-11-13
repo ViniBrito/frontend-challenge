@@ -2,7 +2,7 @@ import { clearToken, getToken } from 'utils'
 
 class SomosClient {
   constructor() {
-    this.baseURL = 'https://api.spotify.com/v1'
+    this.baseURL = process.env.REACT_APP_API_URL
   }
 
   onError = error => {}
@@ -44,12 +44,15 @@ class SomosClient {
   }
   async getAlbum(id) {
     try {
-      const response = await fetch(`${this.baseURL}/artists/${id}/albums`, {
-        method: 'GET',
-        headers: {
-          Authorization: `Bearer ${getToken()}`,
+      const response = await fetch(
+        `${this.baseURL}/artists/${id}/albums?limit=10`,
+        {
+          method: 'GET',
+          headers: {
+            Authorization: `Bearer ${getToken()}`,
+          },
         },
-      })
+      )
       const data = response.json()
       return data
     } catch (error) {

@@ -14,6 +14,7 @@ img {
 }
 
 .item {
+  text-transform: capitalize;
 }
 
 .list {
@@ -55,4 +56,13 @@ img {
   align-items: flex-start;
   margin-left: 40%;
   max-width: 50%;
+  margin-bottom: 3%;
+}
+
+.container {
+  margin-bottom: 1%;
+}
+
+.title {
+  margin-bottom: 0.5%;
 }

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 import { SomosClient } from 'utils'
 import { SearchBar } from 'components'
+import { Link } from 'react-router-dom'
 
 import styles from './Search.module.css'
 
@@ -21,7 +22,7 @@ const Search = () => {
         <>
           <p>
             Encontramos {artistInfo.length} resultad
-            {+artistInfo.length === 1 ? 'o' : 'os'}:
+            {artistInfo.length === 1 ? 'o' : 'os'}:
           </p>
           <div className={styles.result}>
             {artistInfo.map(item => (
@@ -30,13 +31,13 @@ const Search = () => {
                   src={
                     item.images[0]
                       ? item.images[0].url
-                      : 'https://icon-library.com/images/no-user-image-icon/no-user-image-icon-3.jpg'
+                      : process.env.REACT_APP_MISSING_IMAGE_URL
                   }
                   height="200vh"
                   width="200vh"
                   alt={item.name}
                 />
-                <a href={`/artist/${item.id}`}>{item.name}</a>
+                <Link to={`/artist/${item.id}`}>{item.name}</Link>
               </div>
             ))}
           </div>
@@ -47,22 +48,23 @@ const Search = () => {
   }
 
   return (
-    <React.Fragment>
-      <div className={styles.wrapper}>
-        <p>
-          Veja como é simples! Basta digitar abaixo o nome do (a) artista
-          desejado (a) e clicar em Pesquisar.
-        </p>
-        <br />
+    <div className={styles.wrapper}>
+      <p>
+        Veja como é simples! Basta digitar abaixo o nome do (a) artista desejado
+        (a) e clicar em Pesquisar.
+      </p>
+      <div className={styles.spaced}>
         <SearchBar onClick={send} />
-        <br />
-        <Show />
-        <br />
-        <form action="/">
-          <button>Página inicial</button>
-        </form>
       </div>
-    </React.Fragment>
+      <div className={styles.spaced}>
+        <Show />
+      </div>
+      <div className={styles.spaced}>
+        <Link to="/">
+          <button>Página inicial</button>
+        </Link>
+      </div>
+    </div>
   )
 }
 

@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { SomosClient } from 'utils'
+import { Link } from 'react-router-dom'
 
 import styles from './Home.module.css'
 
@@ -22,9 +23,9 @@ class Home extends React.Component {
           </p>
         </div>
         <div className={styles.space}>
-          <form action="/search">
+          <Link to="/search">
             <button>Buscar artista</button>
-          </form>
+          </Link>
         </div>
       </React.Fragment>
     )

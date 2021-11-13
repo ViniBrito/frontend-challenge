@@ -1,27 +1,32 @@
 import React from 'react'
+import { useState } from 'react/cjs/react.development'
 
 import styles from './SearchBar.module.css'
 
 const SearchBar = ({ onClick }) => {
-  const { 'alt-button': altButton } = styles
+  const [query, setQuery] = useState('')
 
-  const Checker = () => {
-    if (document.getElementById('artist').value.length > 3)
-      document.getElementById('send').click()
+  const updater = value => {
+    setQuery(value)
+    if (value.length > 3) {
+      onClick(value)
+    }
   }
   return (
     <>
-      <div>
-        <input id="artist" onChange={Checker} />
-        <button
-          id="send"
-          type="submit"
-          className={altButton}
-          onClick={() => onClick(document.getElementById('artist').value)}
-        >
-          Pesquisar
-        </button>
-      </div>
+      <input
+        data-testid="label"
+        value={query}
+        onChange={event => updater(event.target.value)}
+      />
+      <button
+        data-testid="button"
+        type="submit"
+        className={styles['alt-button']}
+        onClick={() => onClick(query)}
+      >
+        Pesquisar
+      </button>
     </>
   )
 }

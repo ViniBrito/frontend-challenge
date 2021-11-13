@@ -24,6 +24,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  inline-size: min-content;
 }
 
 a {
@@ -34,4 +35,8 @@ a {
 
 a:hover {
   color: #07e100;
+}
+
+.spaced {
+  margin-top: 1%;
 }
